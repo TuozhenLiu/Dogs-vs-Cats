@@ -5,7 +5,7 @@ Using [Tensorflow-R](https://tensorflow.rstudio.com) to finetune Resnet-50 on [D
 For Statistical Computing Course 2021 fall in CUFE.
 ![](./Figure/header.png)
 
-## install & setup
+## Install & Setup
 
 https://tensorflow.rstudio.com
 https://github.com/rstudio/tensorflow
@@ -32,7 +32,7 @@ reticulate::use_condaenv(
 reticulate::py_config()
 ```
 
-# params config
+## Params Config
 
 ```R
 # pixel
@@ -45,7 +45,7 @@ seed <- 1234
 batch_size <- 64
 ```
 
-# generate model
+## Generate Model
 
 ```R
 # load tensorflowAPI：Keras
@@ -77,7 +77,7 @@ model %>% compile(
 )
 ```
 
-## data generator
+## Data Generator
 
 https://www.kaggle.com/c/dogs-vs-cats/data
 
@@ -119,7 +119,7 @@ valid_data_generator <- flow_images_from_directory(
 )
 ```
 
-## train
+## Train
 
 ```R
 model %>% fit_generator(
@@ -137,7 +137,7 @@ model %>% save_model_hdf5("ResNet50")
 
 <img src="Figure/1.png" style="zoom:67%;" />
 
-## evaluate
+## Evaluate
 
 ```R
 model %>% load_model_weights_hdf5("ResNet50")
@@ -147,7 +147,7 @@ model %>% evaluate_generator(
 )
 ```
 
-## inference
+## Inference
 
 ```R
 # function for plot
