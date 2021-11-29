@@ -133,9 +133,9 @@ model %>% fit_generator(
 model %>% save_model_hdf5("ResNet50")
 ```
 
-<img src="Figure/2.png" style="zoom:67%;" />
+<img src="Figure/2.png" style="zoom:30%;" />
 
-<img src="Figure/1.png" style="zoom:67%;" />
+<img src="Figure/1.png" style="zoom:30%;" />
 
 ## Evaluate
 
@@ -145,6 +145,8 @@ model %>% evaluate_generator(
   generator = valid_data_generator,
   steps = 10
 )
+##      loss  accuracy 
+## 0.2537442 0.9312500
 ```
 
 ## Inference
@@ -178,4 +180,4 @@ for(pic in list.files("./"))
   inference(pic)
 ```
 
-<img src="Figure/3.png" style="zoom:50%;" />
+<img src="Figure/3.png" style="zoom:10%;" />
