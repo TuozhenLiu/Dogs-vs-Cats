@@ -3,7 +3,8 @@
 Using [Tensorflow-R](https://tensorflow.rstudio.com) to finetune Resnet-50 on [Dogs and Cats classification](https://www.kaggle.com/c/dogs-vs-cats). 
 
 For Statistical Computing Course 2021 fall in CUFE.
-![](./Figure/header.png)
+
+<img src="Figure/header.png" width="80%" />
 
 ## Install & Setup
 
@@ -133,9 +134,9 @@ model %>% fit_generator(
 model %>% save_model_hdf5("ResNet50")
 ```
 
-<img src="Figure/2.png" style="zoom:30%;" />
+<img src="Figure/2.png" width="80%" />
 
-<img src="Figure/1.png" style="zoom:30%;" />
+<img src="Figure/1.png" width="60%" />
 
 ## Evaluate
 
@@ -180,4 +181,4 @@ for(pic in list.files("./"))
   inference(pic)
 ```
 
-<img src="Figure/3.png" style="zoom:10%;" />
+<img src="Figure/3.png" width="40%" />
